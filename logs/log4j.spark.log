@@ -1,0 +1,790 @@
+19/12/20 11:12:26 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+19/12/20 11:12:28 INFO SparkContext: Running Spark version 2.4.3
+19/12/20 11:12:28 WARN SparkConf: Note that spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in mesos/standalone/kubernetes and LOCAL_DIRS in YARN).
+19/12/20 11:12:28 INFO SparkContext: Submitted application: sparklyr
+19/12/20 11:12:28 INFO SecurityManager: Changing view acls to: kdo1
+19/12/20 11:12:28 INFO SecurityManager: Changing modify acls to: kdo1
+19/12/20 11:12:28 INFO SecurityManager: Changing view acls groups to: 
+19/12/20 11:12:28 INFO SecurityManager: Changing modify acls groups to: 
+19/12/20 11:12:28 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(kdo1); groups with view permissions: Set(); users  with modify permissions: Set(kdo1); groups with modify permissions: Set()
+19/12/20 11:12:28 INFO Utils: Successfully started service 'sparkDriver' on port 55433.
+19/12/20 11:12:28 INFO SparkEnv: Registering MapOutputTracker
+19/12/20 11:12:28 INFO SparkEnv: Registering BlockManagerMaster
+19/12/20 11:12:28 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+19/12/20 11:12:28 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+19/12/20 11:12:28 INFO DiskBlockManager: Created local directory at C:\Users\kdo1\AppData\Local\spark\spark-2.4.3-bin-hadoop2.7\tmp\local\blockmgr-8642f385-abbc-4488-9fa7-90a449ff10a4
+19/12/20 11:12:28 INFO MemoryStore: MemoryStore started with capacity 413.9 MB
+19/12/20 11:12:28 INFO SparkEnv: Registering OutputCommitCoordinator
+19/12/20 11:12:28 WARN Utils: The configured local directories are not expected to be URIs; however, got suspicious values [C:/Users/kdo1/AppData/Local/spark/spark-2.4.3-bin-hadoop2.7/tmp/local]. Please check your configured local directories.
+19/12/20 11:12:28 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+19/12/20 11:12:28 INFO SparkUI: Bound SparkUI to 127.0.0.1, and started at http://kubernetes.docker.internal:4040
+19/12/20 11:12:28 INFO SparkContext: Added JAR file:/C:/Users/kdo1/Documents/R/win-library/3.6/sparklyr/java/sparklyr-2.4-2.11.jar at spark://kubernetes.docker.internal:55433/jars/sparklyr-2.4-2.11.jar with timestamp 1576869148672
+19/12/20 11:12:28 INFO Executor: Starting executor ID driver on host localhost
+19/12/20 11:12:28 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 55474.
+19/12/20 11:12:28 INFO NettyBlockTransferService: Server created on kubernetes.docker.internal:55474
+19/12/20 11:12:28 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+19/12/20 11:12:28 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, kubernetes.docker.internal, 55474, None)
+19/12/20 11:12:28 INFO BlockManagerMasterEndpoint: Registering block manager kubernetes.docker.internal:55474 with 413.9 MB RAM, BlockManagerId(driver, kubernetes.docker.internal, 55474, None)
+19/12/20 11:12:28 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, kubernetes.docker.internal, 55474, None)
+19/12/20 11:12:28 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, kubernetes.docker.internal, 55474, None)
+19/12/20 11:12:29 INFO SharedState: loading hive config file: file:/C:/Users/kdo1/AppData/Local/spark/spark-2.4.3-bin-hadoop2.7/conf/hive-site.xml
+19/12/20 11:12:29 INFO SharedState: Setting hive.metastore.warehouse.dir ('C:/Users/kdo1/AppData/Local/spark/spark-2.4.3-bin-hadoop2.7/tmp/hive') to the value of spark.sql.warehouse.dir ('C:/Users/kdo1/AppData/Local/spark/spark-2.4.3-bin-hadoop2.7/tmp/hive').
+19/12/20 11:12:29 INFO SharedState: Warehouse path is 'C:/Users/kdo1/AppData/Local/spark/spark-2.4.3-bin-hadoop2.7/tmp/hive'.
+19/12/20 11:12:29 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+19/12/20 11:12:31 INFO CodeGenerator: Code generated in 161.323601 ms
+19/12/20 11:12:38 INFO SparkContext: Starting job: collect at utils.scala:44
+19/12/20 11:12:38 INFO DAGScheduler: Got job 0 (collect at utils.scala:44) with 1 output partitions
+19/12/20 11:12:38 INFO DAGScheduler: Final stage: ResultStage 0 (collect at utils.scala:44)
+19/12/20 11:12:38 INFO DAGScheduler: Parents of final stage: List()
+19/12/20 11:12:38 INFO DAGScheduler: Missing parents: List()
+19/12/20 11:12:38 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[4] at map at utils.scala:41), which has no missing parents
+19/12/20 11:12:38 WARN SizeEstimator: Failed to check whether UseCompressedOops is set; assuming yes
+19/12/20 11:12:38 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 6.0 KB, free 413.9 MB)
+19/12/20 11:12:38 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 3.4 KB, free 413.9 MB)
+19/12/20 11:12:38 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on kubernetes.docker.internal:55474 (size: 3.4 KB, free: 413.9 MB)
+19/12/20 11:12:38 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1161
+19/12/20 11:12:38 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[4] at map at utils.scala:41) (first 15 tasks are for partitions Vector(0))
+19/12/20 11:12:38 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks
+19/12/20 11:12:38 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 7893 bytes)
+19/12/20 11:12:38 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+19/12/20 11:12:38 INFO Executor: Fetching spark://kubernetes.docker.internal:55433/jars/sparklyr-2.4-2.11.jar with timestamp 1576869148672
+19/12/20 11:12:38 INFO TransportClientFactory: Successfully created connection to kubernetes.docker.internal/127.0.0.1:55433 after 15 ms (0 ms spent in bootstraps)
+19/12/20 11:12:38 INFO Utils: Fetching spark://kubernetes.docker.internal:55433/jars/sparklyr-2.4-2.11.jar to C:\Users\kdo1\AppData\Local\spark\spark-2.4.3-bin-hadoop2.7\tmp\local\spark-f82cebd2-a01e-4ee1-835b-a6c60a8727ea\userFiles-e01820bb-8c08-4bb9-815d-238e3484f687\fetchFileTemp6463579494283542279.tmp
+19/12/20 11:12:39 INFO Executor: Adding file:/C:/Users/kdo1/AppData/Local/spark/spark-2.4.3-bin-hadoop2.7/tmp/local/spark-f82cebd2-a01e-4ee1-835b-a6c60a8727ea/userFiles-e01820bb-8c08-4bb9-815d-238e3484f687/sparklyr-2.4-2.11.jar to class loader
+19/12/20 11:12:39 INFO CodeGenerator: Code generated in 6.3072 ms
+19/12/20 11:12:39 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1013 bytes result sent to driver
+19/12/20 11:12:39 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 390 ms on localhost (executor driver) (1/1)
+19/12/20 11:12:39 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+19/12/20 11:12:39 INFO DAGScheduler: ResultStage 0 (collect at utils.scala:44) finished in 0.544 s
+19/12/20 11:12:39 INFO DAGScheduler: Job 0 finished: collect at utils.scala:44, took 0.602633 s
+19/12/20 11:12:39 INFO ContextCleaner: Cleaned accumulator 27
+19/12/20 11:12:39 INFO CodeGenerator: Code generated in 11.0951 ms
+19/12/20 11:12:39 INFO CodeGenerator: Code generated in 8.7724 ms
+19/12/20 11:12:39 INFO SparkContext: Starting job: sql at <unknown>:0
+19/12/20 11:12:39 INFO DAGScheduler: Registering RDD 13 (sql at <unknown>:0)
+19/12/20 11:12:39 INFO DAGScheduler: Got job 1 (sql at <unknown>:0) with 1 output partitions
+19/12/20 11:12:39 INFO DAGScheduler: Final stage: ResultStage 2 (sql at <unknown>:0)
+19/12/20 11:12:39 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 1)
+19/12/20 11:12:39 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 1)
+19/12/20 11:12:39 INFO DAGScheduler: Submitting ShuffleMapStage 1 (MapPartitionsRDD[13] at sql at <unknown>:0), which has no missing parents
+19/12/20 11:12:39 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 34.1 KB, free 413.9 MB)
+19/12/20 11:12:39 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 14.4 KB, free 413.9 MB)
+19/12/20 11:12:39 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on kubernetes.docker.internal:55474 (size: 14.4 KB, free: 413.9 MB)
+19/12/20 11:12:39 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1161
+19/12/20 11:12:39 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 1 (MapPartitionsRDD[13] at sql at <unknown>:0) (first 15 tasks are for partitions Vector(0))
+19/12/20 11:12:39 INFO TaskSchedulerImpl: Adding task set 1.0 with 1 tasks
+19/12/20 11:12:39 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1, localhost, executor driver, partition 0, PROCESS_LOCAL, 27152 bytes)
+19/12/20 11:12:39 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+19/12/20 11:12:39 INFO CodeGenerator: Code generated in 10.7475 ms
+19/12/20 11:12:39 INFO CodeGenerator: Code generated in 36.5297 ms
+19/12/20 11:12:39 INFO MemoryStore: Block rdd_9_0 stored as values in memory (estimated size 31.3 KB, free 413.8 MB)
+19/12/20 11:12:39 INFO BlockManagerInfo: Added rdd_9_0 in memory on kubernetes.docker.internal:55474 (size: 31.3 KB, free: 413.9 MB)
+19/12/20 11:12:39 INFO CodeGenerator: Code generated in 2.3837 ms
+19/12/20 11:12:39 INFO Executor: Finished task 0.0 in stage 1.0 (TID 1). 2035 bytes result sent to driver
+19/12/20 11:12:39 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 215 ms on localhost (executor driver) (1/1)
+19/12/20 11:12:39 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+19/12/20 11:12:39 INFO DAGScheduler: ShuffleMapStage 1 (sql at <unknown>:0) finished in 0.230 s
+19/12/20 11:12:39 INFO DAGScheduler: looking for newly runnable stages
+19/12/20 11:12:39 INFO DAGScheduler: running: Set()
+19/12/20 11:12:39 INFO DAGScheduler: waiting: Set(ResultStage 2)
+19/12/20 11:12:39 INFO DAGScheduler: failed: Set()
+19/12/20 11:12:39 INFO DAGScheduler: Submitting ResultStage 2 (MapPartitionsRDD[16] at sql at <unknown>:0), which has no missing parents
+19/12/20 11:12:39 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 7.1 KB, free 413.8 MB)
+19/12/20 11:12:39 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 3.8 KB, free 413.8 MB)
+19/12/20 11:12:39 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on kubernetes.docker.internal:55474 (size: 3.8 KB, free: 413.9 MB)
+19/12/20 11:12:39 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1161
+19/12/20 11:12:39 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 2 (MapPartitionsRDD[16] at sql at <unknown>:0) (first 15 tasks are for partitions Vector(0))
+19/12/20 11:12:39 INFO TaskSchedulerImpl: Adding task set 2.0 with 1 tasks
+19/12/20 11:12:39 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 2, localhost, executor driver, partition 0, ANY, 7767 bytes)
+19/12/20 11:12:39 INFO Executor: Running task 0.0 in stage 2.0 (TID 2)
+19/12/20 11:12:39 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+19/12/20 11:12:39 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 6 ms
+19/12/20 11:12:39 INFO Executor: Finished task 0.0 in stage 2.0 (TID 2). 1739 bytes result sent to driver
+19/12/20 11:12:39 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 2) in 36 ms on localhost (executor driver) (1/1)
+19/12/20 11:12:39 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+19/12/20 11:12:39 INFO DAGScheduler: ResultStage 2 (sql at <unknown>:0) finished in 0.043 s
+19/12/20 11:12:39 INFO DAGScheduler: Job 1 finished: sql at <unknown>:0, took 0.298759 s
+19/12/20 11:12:39 INFO BlockManagerInfo: Removed broadcast_2_piece0 on kubernetes.docker.internal:55474 in memory (size: 3.8 KB, free: 413.9 MB)
+19/12/20 11:12:40 INFO CodeGenerator: Code generated in 3.2386 ms
+19/12/20 11:12:40 INFO SparkContext: Starting job: collect at utils.scala:204
+19/12/20 11:12:40 INFO DAGScheduler: Registering RDD 20 (collect at utils.scala:204)
+19/12/20 11:12:40 INFO DAGScheduler: Got job 2 (collect at utils.scala:204) with 1 output partitions
+19/12/20 11:12:40 INFO DAGScheduler: Final stage: ResultStage 4 (collect at utils.scala:204)
+19/12/20 11:12:40 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 3)
+19/12/20 11:12:40 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 3)
+19/12/20 11:12:40 INFO DAGScheduler: Submitting ShuffleMapStage 3 (MapPartitionsRDD[20] at collect at utils.scala:204), which has no missing parents
+19/12/20 11:12:40 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 34.1 KB, free 413.8 MB)
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 94
+19/12/20 11:12:40 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 14.4 KB, free 413.8 MB)
+19/12/20 11:12:40 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on kubernetes.docker.internal:55474 (size: 14.4 KB, free: 413.9 MB)
+19/12/20 11:12:40 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1161
+19/12/20 11:12:40 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 3 (MapPartitionsRDD[20] at collect at utils.scala:204) (first 15 tasks are for partitions Vector(0))
+19/12/20 11:12:40 INFO TaskSchedulerImpl: Adding task set 3.0 with 1 tasks
+19/12/20 11:12:40 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 3, localhost, executor driver, partition 0, PROCESS_LOCAL, 27152 bytes)
+19/12/20 11:12:40 INFO Executor: Running task 0.0 in stage 3.0 (TID 3)
+19/12/20 11:12:40 INFO BlockManager: Found block rdd_9_0 locally
+19/12/20 11:12:40 INFO Executor: Finished task 0.0 in stage 3.0 (TID 3). 2035 bytes result sent to driver
+19/12/20 11:12:40 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 3) in 13 ms on localhost (executor driver) (1/1)
+19/12/20 11:12:40 INFO TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool 
+19/12/20 11:12:40 INFO DAGScheduler: ShuffleMapStage 3 (collect at utils.scala:204) finished in 0.022 s
+19/12/20 11:12:40 INFO DAGScheduler: looking for newly runnable stages
+19/12/20 11:12:40 INFO DAGScheduler: running: Set()
+19/12/20 11:12:40 INFO DAGScheduler: waiting: Set(ResultStage 4)
+19/12/20 11:12:40 INFO DAGScheduler: failed: Set()
+19/12/20 11:12:40 INFO DAGScheduler: Submitting ResultStage 4 (MapPartitionsRDD[23] at collect at utils.scala:204), which has no missing parents
+19/12/20 11:12:40 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 7.1 KB, free 413.8 MB)
+19/12/20 11:12:40 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 3.8 KB, free 413.8 MB)
+19/12/20 11:12:40 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on kubernetes.docker.internal:55474 (size: 3.8 KB, free: 413.9 MB)
+19/12/20 11:12:40 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1161
+19/12/20 11:12:40 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 4 (MapPartitionsRDD[23] at collect at utils.scala:204) (first 15 tasks are for partitions Vector(0))
+19/12/20 11:12:40 INFO TaskSchedulerImpl: Adding task set 4.0 with 1 tasks
+19/12/20 11:12:40 INFO TaskSetManager: Starting task 0.0 in stage 4.0 (TID 4, localhost, executor driver, partition 0, ANY, 7767 bytes)
+19/12/20 11:12:40 INFO Executor: Running task 0.0 in stage 4.0 (TID 4)
+19/12/20 11:12:40 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+19/12/20 11:12:40 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+19/12/20 11:12:40 INFO Executor: Finished task 0.0 in stage 4.0 (TID 4). 1739 bytes result sent to driver
+19/12/20 11:12:40 INFO TaskSetManager: Finished task 0.0 in stage 4.0 (TID 4) in 4 ms on localhost (executor driver) (1/1)
+19/12/20 11:12:40 INFO TaskSchedulerImpl: Removed TaskSet 4.0, whose tasks have all completed, from pool 
+19/12/20 11:12:40 INFO DAGScheduler: ResultStage 4 (collect at utils.scala:204) finished in 0.008 s
+19/12/20 11:12:40 INFO DAGScheduler: Job 2 finished: collect at utils.scala:204, took 0.033547 s
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 111
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 121
+19/12/20 11:12:40 INFO BlockManagerInfo: Removed broadcast_4_piece0 on kubernetes.docker.internal:55474 in memory (size: 3.8 KB, free: 413.9 MB)
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 137
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 139
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 148
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 143
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 159
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 130
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 114
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 154
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 113
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 129
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 144
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 123
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 157
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 133
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 147
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 115
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 125
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 134
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 110
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 149
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 158
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 126
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 156
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 131
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 120
+19/12/20 11:12:40 INFO BlockManagerInfo: Removed broadcast_3_piece0 on kubernetes.docker.internal:55474 in memory (size: 14.4 KB, free: 413.9 MB)
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 119
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 118
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 136
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 151
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 140
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 155
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 127
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 128
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 145
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 112
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 116
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 146
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 141
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 117
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 142
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 150
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 122
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 135
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 153
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 152
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 124
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 138
+19/12/20 11:12:40 INFO ContextCleaner: Cleaned accumulator 132
+19/12/20 11:12:50 INFO ContextCleaner: Cleaned accumulator 103
+19/12/20 11:12:50 INFO ContextCleaner: Cleaned accumulator 107
+19/12/20 11:12:50 INFO ContextCleaner: Cleaned accumulator 108
+19/12/20 11:12:50 INFO ContextCleaner: Cleaned accumulator 99
+19/12/20 11:12:50 INFO ContextCleaner: Cleaned accumulator 109
+19/12/20 11:12:50 INFO ContextCleaner: Cleaned accumulator 95
+19/12/20 11:12:50 INFO ContextCleaner: Cleaned accumulator 100
+19/12/20 11:12:50 INFO ContextCleaner: Cleaned accumulator 98
+19/12/20 11:12:50 INFO ContextCleaner: Cleaned accumulator 104
+19/12/20 11:12:50 INFO ContextCleaner: Cleaned accumulator 101
+19/12/20 11:12:50 INFO ContextCleaner: Cleaned accumulator 102
+19/12/20 11:12:50 INFO ContextCleaner: Cleaned shuffle 1
+19/12/20 11:12:50 INFO ContextCleaner: Cleaned accumulator 96
+19/12/20 11:12:50 INFO ContextCleaner: Cleaned accumulator 105
+19/12/20 11:12:50 INFO ContextCleaner: Cleaned accumulator 106
+19/12/20 11:12:50 INFO ContextCleaner: Cleaned accumulator 97
+19/12/20 11:12:51 INFO CodeGenerator: Code generated in 4.0763 ms
+19/12/20 11:12:51 INFO CodeGenerator: Code generated in 15.5307 ms
+19/12/20 11:12:51 INFO SparkContext: Starting job: first at LinearRegression.scala:321
+19/12/20 11:12:51 INFO DAGScheduler: Got job 3 (first at LinearRegression.scala:321) with 1 output partitions
+19/12/20 11:12:51 INFO DAGScheduler: Final stage: ResultStage 5 (first at LinearRegression.scala:321)
+19/12/20 11:12:51 INFO DAGScheduler: Parents of final stage: List()
+19/12/20 11:12:51 INFO DAGScheduler: Missing parents: List()
+19/12/20 11:12:51 INFO DAGScheduler: Submitting ResultStage 5 (MapPartitionsRDD[28] at first at LinearRegression.scala:321), which has no missing parents
+19/12/20 11:12:51 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 43.4 KB, free 413.8 MB)
+19/12/20 11:12:51 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 16.5 KB, free 413.8 MB)
+19/12/20 11:12:51 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on kubernetes.docker.internal:55474 (size: 16.5 KB, free: 413.9 MB)
+19/12/20 11:12:51 INFO SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1161
+19/12/20 11:12:51 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 5 (MapPartitionsRDD[28] at first at LinearRegression.scala:321) (first 15 tasks are for partitions Vector(0))
+19/12/20 11:12:51 INFO TaskSchedulerImpl: Adding task set 5.0 with 1 tasks
+19/12/20 11:12:51 INFO TaskSetManager: Starting task 0.0 in stage 5.0 (TID 5, localhost, executor driver, partition 0, PROCESS_LOCAL, 27163 bytes)
+19/12/20 11:12:51 INFO Executor: Running task 0.0 in stage 5.0 (TID 5)
+19/12/20 11:12:51 INFO BlockManager: Found block rdd_9_0 locally
+19/12/20 11:12:51 INFO Executor: 1 block locks were not released by TID = 5:
+[rdd_9_0]
+19/12/20 11:12:51 INFO Executor: Finished task 0.0 in stage 5.0 (TID 5). 1430 bytes result sent to driver
+19/12/20 11:12:51 INFO TaskSetManager: Finished task 0.0 in stage 5.0 (TID 5) in 40 ms on localhost (executor driver) (1/1)
+19/12/20 11:12:51 INFO TaskSchedulerImpl: Removed TaskSet 5.0, whose tasks have all completed, from pool 
+19/12/20 11:12:51 INFO DAGScheduler: ResultStage 5 (first at LinearRegression.scala:321) finished in 0.046 s
+19/12/20 11:12:51 INFO DAGScheduler: Job 3 finished: first at LinearRegression.scala:321, took 0.048009 s
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 179
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 169
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 166
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 176
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 178
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 187
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 170
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 164
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 180
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 171
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 181
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 168
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 167
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 177
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 174
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 185
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 163
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 175
+19/12/20 11:12:51 INFO BlockManagerInfo: Removed broadcast_5_piece0 on kubernetes.docker.internal:55474 in memory (size: 16.5 KB, free: 413.9 MB)
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 172
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 173
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 183
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 165
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 186
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 182
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 184
+19/12/20 11:12:51 INFO CodeGenerator: Code generated in 12.179 ms
+19/12/20 11:12:51 INFO Instrumentation: [f1450a04] Stage class: LinearRegression
+19/12/20 11:12:51 INFO Instrumentation: [f1450a04] Stage uid: linear_regression_461c5abd13d8
+19/12/20 11:12:51 INFO CodeGenerator: Code generated in 19.6119 ms
+19/12/20 11:12:51 INFO Instrumentation: [f1450a04] training: numPartitions=1 storageLevel=StorageLevel(1 replicas)
+19/12/20 11:12:51 INFO Instrumentation: [f1450a04] {"elasticNetParam":0.0,"featuresCol":"features","fitIntercept":true,"solver":"auto","labelCol":"label","predictionCol":"prediction","standardization":true,"loss":"squaredError","regParam":0.0,"tol":1.0E-6,"maxIter":100}
+19/12/20 11:12:51 INFO Instrumentation: [f1450a04] {"numFeatures":2}
+19/12/20 11:12:51 WARN Instrumentation: [f1450a04] regParam is zero, which might cause numerical instability and overfitting.
+19/12/20 11:12:51 INFO SparkContext: Starting job: treeAggregate at WeightedLeastSquares.scala:105
+19/12/20 11:12:51 INFO DAGScheduler: Got job 4 (treeAggregate at WeightedLeastSquares.scala:105) with 1 output partitions
+19/12/20 11:12:51 INFO DAGScheduler: Final stage: ResultStage 6 (treeAggregate at WeightedLeastSquares.scala:105)
+19/12/20 11:12:51 INFO DAGScheduler: Parents of final stage: List()
+19/12/20 11:12:51 INFO DAGScheduler: Missing parents: List()
+19/12/20 11:12:51 INFO DAGScheduler: Submitting ResultStage 6 (MapPartitionsRDD[40] at treeAggregate at WeightedLeastSquares.scala:105), which has no missing parents
+19/12/20 11:12:51 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 46.6 KB, free 413.8 MB)
+19/12/20 11:12:51 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 17.8 KB, free 413.8 MB)
+19/12/20 11:12:51 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on kubernetes.docker.internal:55474 (size: 17.8 KB, free: 413.9 MB)
+19/12/20 11:12:51 INFO SparkContext: Created broadcast 6 from broadcast at DAGScheduler.scala:1161
+19/12/20 11:12:51 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 6 (MapPartitionsRDD[40] at treeAggregate at WeightedLeastSquares.scala:105) (first 15 tasks are for partitions Vector(0))
+19/12/20 11:12:51 INFO TaskSchedulerImpl: Adding task set 6.0 with 1 tasks
+19/12/20 11:12:51 INFO TaskSetManager: Starting task 0.0 in stage 6.0 (TID 6, localhost, executor driver, partition 0, PROCESS_LOCAL, 27163 bytes)
+19/12/20 11:12:51 INFO Executor: Running task 0.0 in stage 6.0 (TID 6)
+19/12/20 11:12:51 INFO BlockManager: Found block rdd_9_0 locally
+19/12/20 11:12:51 INFO CodeGenerator: Code generated in 3.9675 ms
+19/12/20 11:12:51 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+19/12/20 11:12:51 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+19/12/20 11:12:51 INFO Executor: Finished task 0.0 in stage 6.0 (TID 6). 1751 bytes result sent to driver
+19/12/20 11:12:51 INFO TaskSetManager: Finished task 0.0 in stage 6.0 (TID 6) in 30 ms on localhost (executor driver) (1/1)
+19/12/20 11:12:51 INFO TaskSchedulerImpl: Removed TaskSet 6.0, whose tasks have all completed, from pool 
+19/12/20 11:12:51 INFO DAGScheduler: ResultStage 6 (treeAggregate at WeightedLeastSquares.scala:105) finished in 0.040 s
+19/12/20 11:12:51 INFO DAGScheduler: Job 4 finished: treeAggregate at WeightedLeastSquares.scala:105, took 0.041401 s
+19/12/20 11:12:51 INFO Instrumentation: [f1450a04] Number of instances: 252.
+19/12/20 11:12:51 WARN LAPACK: Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
+19/12/20 11:12:51 WARN LAPACK: Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 210
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 194
+19/12/20 11:12:51 INFO BlockManagerInfo: Removed broadcast_6_piece0 on kubernetes.docker.internal:55474 in memory (size: 17.8 KB, free: 413.9 MB)
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 206
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 198
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 202
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 204
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 195
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 209
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 218
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 196
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 217
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 200
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 212
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 207
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 205
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 216
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 214
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 201
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 208
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 215
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 211
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 197
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 199
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 213
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 203
+19/12/20 11:12:51 INFO CodeGenerator: Code generated in 10.163 ms
+19/12/20 11:12:51 INFO SparkContext: Starting job: treeAggregate at RegressionMetrics.scala:57
+19/12/20 11:12:51 INFO DAGScheduler: Got job 5 (treeAggregate at RegressionMetrics.scala:57) with 1 output partitions
+19/12/20 11:12:51 INFO DAGScheduler: Final stage: ResultStage 7 (treeAggregate at RegressionMetrics.scala:57)
+19/12/20 11:12:51 INFO DAGScheduler: Parents of final stage: List()
+19/12/20 11:12:51 INFO DAGScheduler: Missing parents: List()
+19/12/20 11:12:51 INFO DAGScheduler: Submitting ResultStage 7 (MapPartitionsRDD[48] at treeAggregate at RegressionMetrics.scala:57), which has no missing parents
+19/12/20 11:12:51 INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 47.9 KB, free 413.8 MB)
+19/12/20 11:12:51 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 19.1 KB, free 413.8 MB)
+19/12/20 11:12:51 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on kubernetes.docker.internal:55474 (size: 19.1 KB, free: 413.9 MB)
+19/12/20 11:12:51 INFO SparkContext: Created broadcast 7 from broadcast at DAGScheduler.scala:1161
+19/12/20 11:12:51 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 7 (MapPartitionsRDD[48] at treeAggregate at RegressionMetrics.scala:57) (first 15 tasks are for partitions Vector(0))
+19/12/20 11:12:51 INFO TaskSchedulerImpl: Adding task set 7.0 with 1 tasks
+19/12/20 11:12:51 INFO TaskSetManager: Starting task 0.0 in stage 7.0 (TID 7, localhost, executor driver, partition 0, PROCESS_LOCAL, 27163 bytes)
+19/12/20 11:12:51 INFO Executor: Running task 0.0 in stage 7.0 (TID 7)
+19/12/20 11:12:51 INFO BlockManager: Found block rdd_9_0 locally
+19/12/20 11:12:51 INFO CodeGenerator: Code generated in 3.5926 ms
+19/12/20 11:12:51 INFO Executor: Finished task 0.0 in stage 7.0 (TID 7). 1869 bytes result sent to driver
+19/12/20 11:12:51 INFO TaskSetManager: Finished task 0.0 in stage 7.0 (TID 7) in 26 ms on localhost (executor driver) (1/1)
+19/12/20 11:12:51 INFO TaskSchedulerImpl: Removed TaskSet 7.0, whose tasks have all completed, from pool 
+19/12/20 11:12:51 INFO DAGScheduler: ResultStage 7 (treeAggregate at RegressionMetrics.scala:57) finished in 0.032 s
+19/12/20 11:12:51 INFO DAGScheduler: Job 5 finished: treeAggregate at RegressionMetrics.scala:57, took 0.036342 s
+19/12/20 11:12:51 INFO SparkContext: Starting job: sum at RegressionMetrics.scala:71
+19/12/20 11:12:51 INFO DAGScheduler: Got job 6 (sum at RegressionMetrics.scala:71) with 1 output partitions
+19/12/20 11:12:51 INFO DAGScheduler: Final stage: ResultStage 8 (sum at RegressionMetrics.scala:71)
+19/12/20 11:12:51 INFO DAGScheduler: Parents of final stage: List()
+19/12/20 11:12:51 INFO DAGScheduler: Missing parents: List()
+19/12/20 11:12:51 INFO DAGScheduler: Submitting ResultStage 8 (MapPartitionsRDD[49] at map at RegressionMetrics.scala:69), which has no missing parents
+19/12/20 11:12:51 INFO MemoryStore: Block broadcast_8 stored as values in memory (estimated size 47.0 KB, free 413.7 MB)
+19/12/20 11:12:51 INFO MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 18.8 KB, free 413.7 MB)
+19/12/20 11:12:51 INFO BlockManagerInfo: Added broadcast_8_piece0 in memory on kubernetes.docker.internal:55474 (size: 18.8 KB, free: 413.8 MB)
+19/12/20 11:12:51 INFO SparkContext: Created broadcast 8 from broadcast at DAGScheduler.scala:1161
+19/12/20 11:12:51 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 8 (MapPartitionsRDD[49] at map at RegressionMetrics.scala:69) (first 15 tasks are for partitions Vector(0))
+19/12/20 11:12:51 INFO TaskSchedulerImpl: Adding task set 8.0 with 1 tasks
+19/12/20 11:12:51 INFO TaskSetManager: Starting task 0.0 in stage 8.0 (TID 8, localhost, executor driver, partition 0, PROCESS_LOCAL, 27163 bytes)
+19/12/20 11:12:51 INFO Executor: Running task 0.0 in stage 8.0 (TID 8)
+19/12/20 11:12:51 INFO BlockManager: Found block rdd_9_0 locally
+19/12/20 11:12:51 INFO Executor: Finished task 0.0 in stage 8.0 (TID 8). 1300 bytes result sent to driver
+19/12/20 11:12:51 INFO TaskSetManager: Finished task 0.0 in stage 8.0 (TID 8) in 10 ms on localhost (executor driver) (1/1)
+19/12/20 11:12:51 INFO TaskSchedulerImpl: Removed TaskSet 8.0, whose tasks have all completed, from pool 
+19/12/20 11:12:51 INFO DAGScheduler: ResultStage 8 (sum at RegressionMetrics.scala:71) finished in 0.016 s
+19/12/20 11:12:51 INFO DAGScheduler: Job 6 finished: sum at RegressionMetrics.scala:71, took 0.017206 s
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 253
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 259
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 222
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 233
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 228
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 239
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 257
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 245
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 270
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 268
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 244
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 247
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 252
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 260
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 265
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 226
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 267
+19/12/20 11:12:51 INFO BlockManagerInfo: Removed broadcast_8_piece0 on kubernetes.docker.internal:55474 in memory (size: 18.8 KB, free: 413.9 MB)
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 237
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 258
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 234
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 263
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 249
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 271
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 230
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 232
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 256
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 231
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 227
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 240
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 243
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 242
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 246
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 238
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 248
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 261
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 236
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 264
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 224
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 250
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 241
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 266
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 225
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 229
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 262
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 254
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 235
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 251
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 223
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 269
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 255
+19/12/20 11:12:51 INFO BlockManagerInfo: Removed broadcast_7_piece0 on kubernetes.docker.internal:55474 in memory (size: 19.1 KB, free: 413.9 MB)
+19/12/20 11:12:51 INFO ContextCleaner: Cleaned accumulator 272
+19/12/20 11:12:51 INFO SparkContext: Starting job: count at LinearRegression.scala:952
+19/12/20 11:12:51 INFO DAGScheduler: Registering RDD 53 (count at LinearRegression.scala:952)
+19/12/20 11:12:51 INFO DAGScheduler: Got job 7 (count at LinearRegression.scala:952) with 1 output partitions
+19/12/20 11:12:51 INFO DAGScheduler: Final stage: ResultStage 10 (count at LinearRegression.scala:952)
+19/12/20 11:12:51 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 9)
+19/12/20 11:12:51 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 9)
+19/12/20 11:12:51 INFO DAGScheduler: Submitting ShuffleMapStage 9 (MapPartitionsRDD[53] at count at LinearRegression.scala:952), which has no missing parents
+19/12/20 11:12:51 INFO MemoryStore: Block broadcast_9 stored as values in memory (estimated size 34.2 KB, free 413.8 MB)
+19/12/20 11:12:51 INFO MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 14.5 KB, free 413.8 MB)
+19/12/20 11:12:51 INFO BlockManagerInfo: Added broadcast_9_piece0 in memory on kubernetes.docker.internal:55474 (size: 14.5 KB, free: 413.9 MB)
+19/12/20 11:12:51 INFO SparkContext: Created broadcast 9 from broadcast at DAGScheduler.scala:1161
+19/12/20 11:12:51 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 9 (MapPartitionsRDD[53] at count at LinearRegression.scala:952) (first 15 tasks are for partitions Vector(0))
+19/12/20 11:12:51 INFO TaskSchedulerImpl: Adding task set 9.0 with 1 tasks
+19/12/20 11:12:51 INFO TaskSetManager: Starting task 0.0 in stage 9.0 (TID 9, localhost, executor driver, partition 0, PROCESS_LOCAL, 27152 bytes)
+19/12/20 11:12:51 INFO Executor: Running task 0.0 in stage 9.0 (TID 9)
+19/12/20 11:12:51 INFO BlockManager: Found block rdd_9_0 locally
+19/12/20 11:12:51 INFO Executor: Finished task 0.0 in stage 9.0 (TID 9). 2035 bytes result sent to driver
+19/12/20 11:12:51 INFO TaskSetManager: Finished task 0.0 in stage 9.0 (TID 9) in 11 ms on localhost (executor driver) (1/1)
+19/12/20 11:12:51 INFO TaskSchedulerImpl: Removed TaskSet 9.0, whose tasks have all completed, from pool 
+19/12/20 11:12:51 INFO DAGScheduler: ShuffleMapStage 9 (count at LinearRegression.scala:952) finished in 0.015 s
+19/12/20 11:12:51 INFO DAGScheduler: looking for newly runnable stages
+19/12/20 11:12:51 INFO DAGScheduler: running: Set()
+19/12/20 11:12:51 INFO DAGScheduler: waiting: Set(ResultStage 10)
+19/12/20 11:12:51 INFO DAGScheduler: failed: Set()
+19/12/20 11:12:51 INFO DAGScheduler: Submitting ResultStage 10 (MapPartitionsRDD[56] at count at LinearRegression.scala:952), which has no missing parents
+19/12/20 11:12:51 INFO MemoryStore: Block broadcast_10 stored as values in memory (estimated size 7.1 KB, free 413.8 MB)
+19/12/20 11:12:51 INFO MemoryStore: Block broadcast_10_piece0 stored as bytes in memory (estimated size 3.8 KB, free 413.8 MB)
+19/12/20 11:12:51 INFO BlockManagerInfo: Added broadcast_10_piece0 in memory on kubernetes.docker.internal:55474 (size: 3.8 KB, free: 413.9 MB)
+19/12/20 11:12:51 INFO SparkContext: Created broadcast 10 from broadcast at DAGScheduler.scala:1161
+19/12/20 11:12:51 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 10 (MapPartitionsRDD[56] at count at LinearRegression.scala:952) (first 15 tasks are for partitions Vector(0))
+19/12/20 11:12:51 INFO TaskSchedulerImpl: Adding task set 10.0 with 1 tasks
+19/12/20 11:12:51 INFO TaskSetManager: Starting task 0.0 in stage 10.0 (TID 10, localhost, executor driver, partition 0, ANY, 7767 bytes)
+19/12/20 11:12:51 INFO Executor: Running task 0.0 in stage 10.0 (TID 10)
+19/12/20 11:12:51 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+19/12/20 11:12:51 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+19/12/20 11:12:51 INFO Executor: Finished task 0.0 in stage 10.0 (TID 10). 1653 bytes result sent to driver
+19/12/20 11:12:51 INFO TaskSetManager: Finished task 0.0 in stage 10.0 (TID 10) in 3 ms on localhost (executor driver) (1/1)
+19/12/20 11:12:51 INFO TaskSchedulerImpl: Removed TaskSet 10.0, whose tasks have all completed, from pool 
+19/12/20 11:12:51 INFO DAGScheduler: ResultStage 10 (count at LinearRegression.scala:952) finished in 0.007 s
+19/12/20 11:12:51 INFO DAGScheduler: Job 7 finished: count at LinearRegression.scala:952, took 0.024661 s
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 327
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 320
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 328
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 287
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 276
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 331
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 286
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 318
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned shuffle 2
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 316
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 335
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 337
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 293
+19/12/20 11:12:52 INFO BlockManagerInfo: Removed broadcast_9_piece0 on kubernetes.docker.internal:55474 in memory (size: 14.5 KB, free: 413.9 MB)
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 319
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 280
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 336
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 291
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 333
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 311
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 305
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 289
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 310
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 296
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 301
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 324
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 326
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 322
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 283
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 312
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 273
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 307
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 279
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 288
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 294
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 295
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 297
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 330
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 290
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 298
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 284
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 315
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 314
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 325
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 292
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 278
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 274
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 303
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 329
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 317
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 285
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 275
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 321
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 281
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 277
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 299
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 334
+19/12/20 11:12:52 INFO BlockManagerInfo: Removed broadcast_10_piece0 on kubernetes.docker.internal:55474 in memory (size: 3.8 KB, free: 413.9 MB)
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 302
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 282
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 300
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 304
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 313
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 323
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 306
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 308
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 309
+19/12/20 11:12:52 INFO ContextCleaner: Cleaned accumulator 332
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 338
+19/12/20 11:12:56 INFO SparkContext: Starting job: count at <unknown>:0
+19/12/20 11:12:56 INFO DAGScheduler: Registering RDD 60 (count at <unknown>:0)
+19/12/20 11:12:56 INFO DAGScheduler: Got job 8 (count at <unknown>:0) with 1 output partitions
+19/12/20 11:12:56 INFO DAGScheduler: Final stage: ResultStage 12 (count at <unknown>:0)
+19/12/20 11:12:56 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 11)
+19/12/20 11:12:56 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 11)
+19/12/20 11:12:56 INFO DAGScheduler: Submitting ShuffleMapStage 11 (MapPartitionsRDD[60] at count at <unknown>:0), which has no missing parents
+19/12/20 11:12:56 INFO MemoryStore: Block broadcast_11 stored as values in memory (estimated size 34.1 KB, free 413.8 MB)
+19/12/20 11:12:56 INFO MemoryStore: Block broadcast_11_piece0 stored as bytes in memory (estimated size 14.4 KB, free 413.8 MB)
+19/12/20 11:12:56 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on kubernetes.docker.internal:55474 (size: 14.4 KB, free: 413.9 MB)
+19/12/20 11:12:56 INFO SparkContext: Created broadcast 11 from broadcast at DAGScheduler.scala:1161
+19/12/20 11:12:56 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 11 (MapPartitionsRDD[60] at count at <unknown>:0) (first 15 tasks are for partitions Vector(0))
+19/12/20 11:12:56 INFO TaskSchedulerImpl: Adding task set 11.0 with 1 tasks
+19/12/20 11:12:56 INFO TaskSetManager: Starting task 0.0 in stage 11.0 (TID 11, localhost, executor driver, partition 0, PROCESS_LOCAL, 27152 bytes)
+19/12/20 11:12:56 INFO Executor: Running task 0.0 in stage 11.0 (TID 11)
+19/12/20 11:12:56 INFO BlockManager: Found block rdd_9_0 locally
+19/12/20 11:12:56 INFO Executor: Finished task 0.0 in stage 11.0 (TID 11). 1992 bytes result sent to driver
+19/12/20 11:12:56 INFO TaskSetManager: Finished task 0.0 in stage 11.0 (TID 11) in 10 ms on localhost (executor driver) (1/1)
+19/12/20 11:12:56 INFO TaskSchedulerImpl: Removed TaskSet 11.0, whose tasks have all completed, from pool 
+19/12/20 11:12:56 INFO DAGScheduler: ShuffleMapStage 11 (count at <unknown>:0) finished in 0.014 s
+19/12/20 11:12:56 INFO DAGScheduler: looking for newly runnable stages
+19/12/20 11:12:56 INFO DAGScheduler: running: Set()
+19/12/20 11:12:56 INFO DAGScheduler: waiting: Set(ResultStage 12)
+19/12/20 11:12:56 INFO DAGScheduler: failed: Set()
+19/12/20 11:12:56 INFO DAGScheduler: Submitting ResultStage 12 (MapPartitionsRDD[63] at count at <unknown>:0), which has no missing parents
+19/12/20 11:12:56 INFO MemoryStore: Block broadcast_12 stored as values in memory (estimated size 7.1 KB, free 413.8 MB)
+19/12/20 11:12:56 INFO MemoryStore: Block broadcast_12_piece0 stored as bytes in memory (estimated size 3.8 KB, free 413.8 MB)
+19/12/20 11:12:56 INFO BlockManagerInfo: Added broadcast_12_piece0 in memory on kubernetes.docker.internal:55474 (size: 3.8 KB, free: 413.9 MB)
+19/12/20 11:12:56 INFO SparkContext: Created broadcast 12 from broadcast at DAGScheduler.scala:1161
+19/12/20 11:12:56 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 12 (MapPartitionsRDD[63] at count at <unknown>:0) (first 15 tasks are for partitions Vector(0))
+19/12/20 11:12:56 INFO TaskSchedulerImpl: Adding task set 12.0 with 1 tasks
+19/12/20 11:12:56 INFO TaskSetManager: Starting task 0.0 in stage 12.0 (TID 12, localhost, executor driver, partition 0, ANY, 7767 bytes)
+19/12/20 11:12:56 INFO Executor: Running task 0.0 in stage 12.0 (TID 12)
+19/12/20 11:12:56 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+19/12/20 11:12:56 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+19/12/20 11:12:56 INFO Executor: Finished task 0.0 in stage 12.0 (TID 12). 1696 bytes result sent to driver
+19/12/20 11:12:56 INFO TaskSetManager: Finished task 0.0 in stage 12.0 (TID 12) in 4 ms on localhost (executor driver) (1/1)
+19/12/20 11:12:56 INFO TaskSchedulerImpl: Removed TaskSet 12.0, whose tasks have all completed, from pool 
+19/12/20 11:12:56 INFO DAGScheduler: ResultStage 12 (count at <unknown>:0) finished in 0.011 s
+19/12/20 11:12:56 INFO DAGScheduler: Job 8 finished: count at <unknown>:0, took 0.028089 s
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 348
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 398
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 356
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 391
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 380
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 354
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 368
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 372
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 379
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 366
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 395
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 355
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 370
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 400
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 382
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned shuffle 3
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 342
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 352
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 345
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 403
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 402
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 369
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 353
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 397
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 363
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 399
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 401
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 390
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 349
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 381
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 375
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 396
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 351
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 373
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 367
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 385
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 365
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 359
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 358
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 347
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 374
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 371
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 344
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 340
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 388
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 339
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 341
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 386
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 392
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 350
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 387
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 364
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 362
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 360
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 394
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 346
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 377
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 383
+19/12/20 11:12:56 INFO BlockManagerInfo: Removed broadcast_12_piece0 on kubernetes.docker.internal:55474 in memory (size: 3.8 KB, free: 413.9 MB)
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 384
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 343
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 361
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 393
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 376
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 378
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 389
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 357
+19/12/20 11:12:56 INFO BlockManagerInfo: Removed broadcast_11_piece0 on kubernetes.docker.internal:55474 in memory (size: 14.4 KB, free: 413.9 MB)
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 79
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 88
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 73
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned shuffle 0
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 22
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 5
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 59
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 15
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 32
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 1
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 30
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 17
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 161
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 71
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 89
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 25
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 188
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 55
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 82
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 52
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 189
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 80
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 2
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 4
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 16
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 34
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 191
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 37
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 54
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 76
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 91
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 11
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 58
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 29
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 0
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 56
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 84
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 90
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 21
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 40
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 193
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 93
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 74
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 6
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 66
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 60
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 39
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 62
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 13
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 53
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 190
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 23
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 14
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 64
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 20
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 87
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 67
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 69
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 160
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 50
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 9
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 162
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 41
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 51
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 49
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 75
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 44
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 24
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 86
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 28
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 45
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 61
+19/12/20 11:12:56 INFO BlockManagerInfo: Removed broadcast_0_piece0 on kubernetes.docker.internal:55474 in memory (size: 3.4 KB, free: 413.9 MB)
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 92
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 63
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 12
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 7
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 83
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 72
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 3
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 192
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 65
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 46
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 57
+19/12/20 11:12:56 INFO BlockManagerInfo: Removed broadcast_1_piece0 on kubernetes.docker.internal:55474 in memory (size: 14.4 KB, free: 413.9 MB)
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 42
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 10
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 33
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 81
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 36
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 35
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 31
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 48
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 85
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 77
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 18
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 68
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 8
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 70
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 19
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 47
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 78
+19/12/20 11:12:56 INFO ContextCleaner: Cleaned accumulator 38
+19/12/20 11:12:56 INFO CodeGenerator: Code generated in 11.6358 ms
+19/12/20 11:12:56 INFO SparkContext: Starting job: collect at utils.scala:37
+19/12/20 11:12:56 INFO DAGScheduler: Got job 9 (collect at utils.scala:37) with 1 output partitions
+19/12/20 11:12:56 INFO DAGScheduler: Final stage: ResultStage 13 (collect at utils.scala:37)
+19/12/20 11:12:56 INFO DAGScheduler: Parents of final stage: List()
+19/12/20 11:12:56 INFO DAGScheduler: Missing parents: List()
+19/12/20 11:12:56 INFO DAGScheduler: Submitting ResultStage 13 (MapPartitionsRDD[69] at map at utils.scala:34), which has no missing parents
+19/12/20 11:12:56 INFO MemoryStore: Block broadcast_13 stored as values in memory (estimated size 48.9 KB, free 413.8 MB)
+19/12/20 11:12:56 INFO MemoryStore: Block broadcast_13_piece0 stored as bytes in memory (estimated size 19.5 KB, free 413.8 MB)
+19/12/20 11:12:56 INFO BlockManagerInfo: Added broadcast_13_piece0 in memory on kubernetes.docker.internal:55474 (size: 19.5 KB, free: 413.9 MB)
+19/12/20 11:12:56 INFO SparkContext: Created broadcast 13 from broadcast at DAGScheduler.scala:1161
+19/12/20 11:12:56 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 13 (MapPartitionsRDD[69] at map at utils.scala:34) (first 15 tasks are for partitions Vector(0))
+19/12/20 11:12:56 INFO TaskSchedulerImpl: Adding task set 13.0 with 1 tasks
+19/12/20 11:12:56 INFO TaskSetManager: Starting task 0.0 in stage 13.0 (TID 13, localhost, executor driver, partition 0, PROCESS_LOCAL, 27163 bytes)
+19/12/20 11:12:56 INFO Executor: Running task 0.0 in stage 13.0 (TID 13)
+19/12/20 11:12:56 INFO BlockManager: Found block rdd_9_0 locally
+19/12/20 11:12:56 INFO CodeGenerator: Code generated in 2.7084 ms
+19/12/20 11:12:56 INFO Executor: Finished task 0.0 in stage 13.0 (TID 13). 3312 bytes result sent to driver
+19/12/20 11:12:56 INFO TaskSetManager: Finished task 0.0 in stage 13.0 (TID 13) in 13 ms on localhost (executor driver) (1/1)
+19/12/20 11:12:56 INFO TaskSchedulerImpl: Removed TaskSet 13.0, whose tasks have all completed, from pool 
+19/12/20 11:12:56 INFO DAGScheduler: ResultStage 13 (collect at utils.scala:37) finished in 0.017 s
+19/12/20 11:12:56 INFO DAGScheduler: Job 9 finished: collect at utils.scala:37, took 0.028633 s
+19/12/20 11:13:03 INFO ContextCleaner: Cleaned accumulator 428
+19/12/20 11:13:03 INFO ContextCleaner: Cleaned accumulator 425
+19/12/20 11:13:03 INFO ContextCleaner: Cleaned accumulator 419
+19/12/20 11:13:03 INFO ContextCleaner: Cleaned accumulator 431
+19/12/20 11:13:03 INFO ContextCleaner: Cleaned accumulator 408
+19/12/20 11:13:03 INFO ContextCleaner: Cleaned accumulator 414
+19/12/20 11:13:03 INFO ContextCleaner: Cleaned accumulator 421
+19/12/20 11:13:03 INFO ContextCleaner: Cleaned accumulator 417
+19/12/20 11:13:03 INFO ContextCleaner: Cleaned accumulator 413
+19/12/20 11:13:03 INFO ContextCleaner: Cleaned accumulator 427
+19/12/20 11:13:03 INFO ContextCleaner: Cleaned accumulator 415
+19/12/20 11:13:03 INFO ContextCleaner: Cleaned accumulator 407
+19/12/20 11:13:03 INFO ContextCleaner: Cleaned accumulator 410
+19/12/20 11:13:03 INFO ContextCleaner: Cleaned accumulator 429
+19/12/20 11:13:03 INFO BlockManagerInfo: Removed broadcast_13_piece0 on kubernetes.docker.internal:55474 in memory (size: 19.5 KB, free: 413.9 MB)
+19/12/20 11:13:03 INFO ContextCleaner: Cleaned accumulator 430
+19/12/20 11:13:03 INFO ContextCleaner: Cleaned accumulator 423
+19/12/20 11:13:03 INFO ContextCleaner: Cleaned accumulator 426
+19/12/20 11:13:03 INFO ContextCleaner: Cleaned accumulator 424
+19/12/20 11:13:03 INFO ContextCleaner: Cleaned accumulator 420
+19/12/20 11:13:03 INFO ContextCleaner: Cleaned accumulator 416
+19/12/20 11:13:03 INFO ContextCleaner: Cleaned accumulator 418
+19/12/20 11:13:03 INFO ContextCleaner: Cleaned accumulator 409
+19/12/20 11:13:03 INFO ContextCleaner: Cleaned accumulator 422
+19/12/20 11:13:03 INFO ContextCleaner: Cleaned accumulator 411
+19/12/20 11:13:03 INFO ContextCleaner: Cleaned accumulator 412
