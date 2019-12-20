@@ -13,3 +13,5 @@ sc <- spark_connect(master = "local")
 myremotedata <- copy_to(sc, mylocaldata)
 mymodel <- ml_linear_regression(x=myremotedata , formula = bodyfat ~ Weight + Height)
 summary(mymodel)
+
+spark_web(sc)
