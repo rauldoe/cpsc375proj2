@@ -6,6 +6,8 @@
 library(tidyverse)
 library(sparklyr)
 
+setwd("c:/temp/cpsc375proj2/")
+
 # mylocaldata <- read_csv ("http://staff.pubhealth.ku.dk/~tag/Teaching/share/data/Bodyfat.csv")
 mylocaldata <- read_csv("Bodyfat.csv")
 
